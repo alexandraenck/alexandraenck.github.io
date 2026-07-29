@@ -74,14 +74,13 @@ export default function Home() {
           </figure>
           <span className="scribble">made by hand</span>
         </div>
-        <div className="hero-index" aria-hidden="true">01—04</div>
+        <div className="hero-index" aria-hidden="true">01—03</div>
       </section>
 
       <div className="ticker" aria-hidden="true">
         <div>
-          <span>Illustration ✦</span><span>Graphic Design ✦</span>
-          <span>Knitwear ✦</span><span>Television ✦</span>
-          <span>Illustration ✦</span><span>Graphic Design ✦</span>
+          <span>Graphic Design ✦</span><span>Knitwear ✦</span>
+          <span>Television ✦</span><span>Graphic Design ✦</span>
           <span>Knitwear ✦</span><span>Television ✦</span>
         </div>
       </div>
@@ -89,29 +88,23 @@ export default function Home() {
       <section className="work-index section-pad" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected disciplines</p>
-          <h2>Work, in four acts.</h2>
+          <h2>Work, in three acts.</h2>
         </div>
         <div className="project-links">
-          <a href="#illustration">
-            <span className="project-number">01</span>
-            <span className="project-name">Illustration</span>
-            <span className="project-note">Portrait / Line / Color</span>
-            <span className="project-arrow">↘</span>
-          </a>
           <a href="#design">
-            <span className="project-number">02</span>
+            <span className="project-number">01</span>
             <span className="project-name">Design</span>
             <span className="project-note">Identity / Digital / Print</span>
             <span className="project-arrow">↘</span>
           </a>
           <a href="#knitwear">
-            <span className="project-number">03</span>
+            <span className="project-number">02</span>
             <span className="project-name">Knitwear</span>
             <span className="project-note">Form / Fiber / Detail</span>
             <span className="project-arrow">↘</span>
           </a>
           <a href="#television">
-            <span className="project-number">04</span>
+            <span className="project-number">03</span>
             <span className="project-name">Television</span>
             <span className="project-note">Commercial / Screen</span>
             <span className="project-arrow">↘</span>
@@ -119,32 +112,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="project-section illustration-section" id="illustration">
-        <div className="project-kicker">
-          <span>01 / Illustration</span>
-          <span>Portrait study</span>
-        </div>
-        <div className="illustration-layout">
-          <div>
-            <h2>Character,<br /><em>captured.</em></h2>
-            <p>
-              Expressive portraiture built from decisive linework, layered
-              color, and an eye for attitude.
-            </p>
-          </div>
-          <figure>
-            <img
-              src="/portfolio/illustration/illustration-01.jpg"
-              alt="Illustrated portrait signed AE"
-            />
-            <figcaption>Portrait study · Digital illustration</figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section className="project-section design-section" id="design">
         <div className="project-kicker light">
-          <span>02 / Design</span>
+          <span>01 / Design</span>
           <span>Identity, digital &amp; print</span>
         </div>
         <div className="design-intro">
@@ -171,7 +141,7 @@ export default function Home() {
 
       <section className="project-section knitwear-section" id="knitwear">
         <div className="project-kicker">
-          <span>03 / Knitwear</span>
+          <span>02 / Knitwear</span>
           <span>Selected constructions</span>
         </div>
         <div className="knitwear-intro">
@@ -197,7 +167,7 @@ export default function Home() {
 
       <section className="project-section television-section" id="television">
         <div className="project-kicker light">
-          <span>04 / Television</span>
+          <span>03 / Television</span>
           <span>Commercial work</span>
         </div>
         <div className="tv-grid">
