@@ -16,7 +16,7 @@ export function ContactPopup() {
   return (
     <>
       <button className="contact-link" type="button" onClick={openDialog}>
-        Start a conversation <span aria-hidden="true">↗</span>
+        Drop a note <span aria-hidden="true">↗</span>
       </button>
 
       <dialog
@@ -33,8 +33,8 @@ export function ContactPopup() {
         <div className="contact-dialog__content">
           <div className="contact-dialog__header">
             <div>
-              <p className="eyebrow">Start a conversation</p>
-              <h2 id="contact-dialog-title">Let&apos;s talk.</h2>
+              <p className="eyebrow">Drop a note</p>
+              <h2 id="contact-dialog-title">Say hello.</h2>
             </div>
             <button
               className="contact-dialog__close"
@@ -47,7 +47,7 @@ export function ContactPopup() {
           </div>
 
           <p id="contact-dialog-description" className="contact-dialog__intro">
-            Share a little about your project or idea.
+            Tell me what you&apos;re working on, dreaming up, or hoping to make.
           </p>
 
           <form className="contact-form">

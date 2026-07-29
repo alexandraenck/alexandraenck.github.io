@@ -248,10 +248,10 @@ export default function Home() {
             <figure key={file}>
               <ClickableArtwork
                 src={`/portfolio/knitwear/${file}`}
-                alt={`Alexandra Enck knitwear study ${String(index + 1).padStart(2, "0")}`}
+                alt={`Alexandra Enck knitwear ${String(index + 1).padStart(2, "0")}`}
                 loading={index > 5 ? "lazy" : "eager"}
               />
-              <figcaption>Study {String(index + 1).padStart(2, "0")}</figcaption>
+              <figcaption>Knitwear {String(index + 1).padStart(2, "0")}</figcaption>
             </figure>
           ))}
         </div>
@@ -307,7 +307,7 @@ export default function Home() {
 
       <footer id="contact">
         <div className="footer-top">
-          <p className="eyebrow">Have a project in mind?</p>
+          <p className="eyebrow">Have something in mind?</p>
           <h2>Let&apos;s make<br /><em>something good.</em></h2>
           <ContactPopup />
         </div>
