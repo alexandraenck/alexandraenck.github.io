@@ -303,7 +303,7 @@ export default function Home() {
             <p>
               Alexandra Enck is a multidisciplinary creative working across
               illustration, design, knitwear, and television. Her portfolio
-              moves fluidly between tactile craft and bold visual systems.
+              moves fluidly between tactile craft and bold visual works.
             </p>
             <p className="about-small">
               This archive brings those threads together—one practice, many
