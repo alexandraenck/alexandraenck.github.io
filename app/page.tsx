@@ -32,12 +32,20 @@ const knitwearWork = [
 ];
 
 const illustrationPngs = new Set([13, 30, 37, 40, 43, 44]);
-const illustrationWork = Array.from({ length: 52 }, (_, index) => {
-  const number = index + 1;
+const illustrationFile = (number: number) => {
   const extension =
     number === 46 ? "jpeg" : illustrationPngs.has(number) ? "png" : "jpg";
-  return `${String(number).padStart(2, "0")}.${extension}`;
-});
+  return {
+    file: `${String(number).padStart(2, "0")}.${extension}`,
+    number,
+  };
+};
+
+const curatedIllustrationNumbers = [1, 6, 7, 8, 14, 16, 29, 30, 42, 43];
+const illustrationWork = curatedIllustrationNumbers.map(illustrationFile);
+const illustrationArchive = Array.from({ length: 52 }, (_, index) => index + 1)
+  .filter((number) => !curatedIllustrationNumbers.includes(number))
+  .map(illustrationFile);
 
 export default function Home() {
   return (
@@ -153,17 +161,43 @@ export default function Home() {
           </p>
         </div>
         <div className="illustration-grid">
-          {illustrationWork.map((file, index) => (
-            <figure key={file}>
+          {illustrationWork.map((item, index) => (
+            <figure key={item.file}>
               <ClickableArtwork
-                src={`/portfolio/illustration/${file}`}
-                alt={`Alexandra Enck illustration ${String(index + 1).padStart(2, "0")}`}
-                loading={index > 7 ? "lazy" : "eager"}
+                src={`/portfolio/illustration/${item.file}`}
+                alt={`Alexandra Enck illustration ${String(item.number).padStart(2, "0")}`}
+                loading={index > 4 ? "lazy" : "eager"}
               />
-              <figcaption>Illustration {String(index + 1).padStart(2, "0")}</figcaption>
+              <figcaption>Illustration {String(item.number).padStart(2, "0")}</figcaption>
             </figure>
           ))}
         </div>
+        <details className="illustration-archive">
+          <summary>
+            <span className="archive-summary-copy">
+              <strong>View all illustrations</strong>
+              <small>42 more works from the complete archive</small>
+            </span>
+            <span className="archive-summary-action archive-summary-action--open">
+              Open archive ↓
+            </span>
+            <span className="archive-summary-action archive-summary-action--close">
+              Close archive ↑
+            </span>
+          </summary>
+          <div className="illustration-grid illustration-grid--archive">
+            {illustrationArchive.map((item) => (
+              <figure key={item.file}>
+                <ClickableArtwork
+                  src={`/portfolio/illustration/${item.file}`}
+                  alt={`Alexandra Enck illustration ${String(item.number).padStart(2, "0")}`}
+                  loading="lazy"
+                />
+                <figcaption>Illustration {String(item.number).padStart(2, "0")}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </details>
       </section>
 
       <section className="project-section design-section" id="design">
