@@ -3,9 +3,7 @@ import "./globals.css";
 import { PixelTrail } from "./PixelTrail";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://alexandra-enck-portfolio.regal-wasp-3726.chatgpt.site",
-  ),
+  metadataBase: new URL("https://alexandraenck.github.io"),
   title: "Alexandra Enck | Multidisciplinary Creative",
   description:
     "Selected illustration, graphic design, knitwear, and television work by Alexandra Enck.",
