@@ -227,6 +227,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Hero copy and desktop/mobile artwork treatments */
 .hero {
+  background: #fff;
   display: grid;
   gap: clamp(1.5rem, 3vw, 3.5rem);
   grid-template-columns: minmax(330px, .72fr) minmax(0, 1.28fr);
