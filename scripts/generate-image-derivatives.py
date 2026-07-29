@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -11,6 +12,11 @@ SOURCE_ROOT = ROOT / "public" / "portfolio"
 OUTPUT_ROOT = ROOT / "public" / "portfolio-optimized"
 MANIFEST_PATH = ROOT / "app" / "image-manifest.json"
 TARGET_WIDTHS = (320, 640, 960)
+SKIPPED_SOURCES = {
+    "brand/alexandra-enck-mark.jpg",
+    "brand/alexandra-signature-original.png",
+    "illustration/illustration-01.jpg",
+}
 
 
 def variant_widths(source_width: int, relative_path: Path) -> list[int]:
@@ -24,11 +30,15 @@ def variant_widths(source_width: int, relative_path: Path) -> list[int]:
 
 
 def main() -> None:
+    if OUTPUT_ROOT.exists():
+        shutil.rmtree(OUTPUT_ROOT)
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     manifest: dict[str, dict[str, object]] = {}
 
     for source_path in sorted(path for path in SOURCE_ROOT.rglob("*") if path.is_file()):
         relative_path = source_path.relative_to(SOURCE_ROOT)
+        if relative_path.parts[0] == "covers" or relative_path.as_posix() in SKIPPED_SOURCES:
+            continue
         original_url = f"/portfolio/{relative_path.as_posix()}"
         output_dir = OUTPUT_ROOT / relative_path.parent
         output_dir.mkdir(parents=True, exist_ok=True)

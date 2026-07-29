@@ -52,6 +52,7 @@ const illustrationArchive = Array.from({ length: 52 }, (_, index) => index + 1)
 export default function Home() {
   return (
     <main id="top">
+      {/* Fixed site navigation and portfolio section links */}
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Alexandra Enck, home">
           <picture>
@@ -81,6 +82,7 @@ export default function Home() {
         </nav>
       </header>
 
+      {/* Opening statement and responsive featured artwork */}
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Multidisciplinary creative · Selected work</p>
@@ -138,6 +140,7 @@ export default function Home() {
         <div className="hero-index" aria-hidden="true">01—04</div>
       </section>
 
+      {/* Moving strip of themes from Alexandra's practice */}
       <div className="ticker" aria-hidden="true">
         <div>
           <span>Storytelling ✦</span><span>Tactile thinking ✦</span>
@@ -147,6 +150,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Overview links for the four portfolio disciplines */}
       <section className="work-index section-pad" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected disciplines</p>
@@ -180,6 +184,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ten featured illustrations plus the on-demand archive */}
       <section className="project-section illustration-section" id="illustration">
         <div className="project-kicker">
           <span>01 / Illustration</span>
@@ -193,7 +198,7 @@ export default function Home() {
           </p>
         </div>
         <div className="illustration-grid">
-          {illustrationWork.map((item, index) => (
+          {illustrationWork.map((item) => (
             <figure key={item.file}>
               <ClickableArtwork
                 src={`/portfolio/illustration/${item.file}`}
@@ -208,6 +213,7 @@ export default function Home() {
         <IllustrationArchive items={illustrationArchive} />
       </section>
 
+      {/* Graphic design collage */}
       <section className="project-section design-section" id="design">
         <div className="project-kicker light">
           <span>02 / Design</span>
@@ -240,6 +246,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Knitwear gallery */}
       <section className="project-section knitwear-section" id="knitwear">
         <div className="project-kicker">
           <span>03 / Knitwear</span>
@@ -267,6 +274,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Television introduction and click-to-load commercial reel */}
       <section className="project-section television-section" id="television">
         <div className="project-kicker light">
           <span>04 / Television</span>
@@ -285,6 +293,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Short biography and creative-practice statement */}
       <section className="about section-pad" id="about">
         <p className="eyebrow">About the practice</p>
         <div className="about-grid">
@@ -306,6 +315,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact call-to-action and site credits */}
       <footer id="contact">
         <div className="footer-top">
           <p className="eyebrow">Have something in mind?</p>

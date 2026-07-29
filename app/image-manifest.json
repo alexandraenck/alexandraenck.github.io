@@ -1,57 +1,15 @@
 {
-  "/portfolio/brand/alexandra-enck-mark.jpg": {
-    "height": 259,
-    "src": "/portfolio-optimized/brand/alexandra-enck-mark-640.webp",
-    "srcSet": "/portfolio-optimized/brand/alexandra-enck-mark-320.webp 320w, /portfolio-optimized/brand/alexandra-enck-mark-640.webp 640w, /portfolio-optimized/brand/alexandra-enck-mark-960.webp 960w",
-    "width": 1875
-  },
   "/portfolio/brand/alexandra-hero-banner.png": {
     "height": 909,
     "src": "/portfolio-optimized/brand/alexandra-hero-banner-640.webp",
     "srcSet": "/portfolio-optimized/brand/alexandra-hero-banner-320.webp 320w, /portfolio-optimized/brand/alexandra-hero-banner-640.webp 640w, /portfolio-optimized/brand/alexandra-hero-banner-960.webp 960w, /portfolio-optimized/brand/alexandra-hero-banner-1600.webp 1600w",
     "width": 1731
   },
-  "/portfolio/brand/alexandra-signature-original.png": {
-    "height": 90,
-    "src": "/portfolio-optimized/brand/alexandra-signature-original-640.webp",
-    "srcSet": "/portfolio-optimized/brand/alexandra-signature-original-320.webp 320w, /portfolio-optimized/brand/alexandra-signature-original-640.webp 640w, /portfolio-optimized/brand/alexandra-signature-original-783.webp 783w",
-    "width": 783
-  },
   "/portfolio/brand/alexandra-signature-transparent.png": {
     "height": 90,
     "src": "/portfolio-optimized/brand/alexandra-signature-transparent-640.webp",
     "srcSet": "/portfolio-optimized/brand/alexandra-signature-transparent-320.webp 320w, /portfolio-optimized/brand/alexandra-signature-transparent-640.webp 640w, /portfolio-optimized/brand/alexandra-signature-transparent-783.webp 783w",
     "width": 783
-  },
-  "/portfolio/covers/112c953f05cd7eab.jpg": {
-    "height": 25,
-    "src": "/portfolio-optimized/covers/112c953f05cd7eab-32.webp",
-    "srcSet": "/portfolio-optimized/covers/112c953f05cd7eab-32.webp 32w",
-    "width": 32
-  },
-  "/portfolio/covers/55b4f5c2a2c4d06f.jpg": {
-    "height": 25,
-    "src": "/portfolio-optimized/covers/55b4f5c2a2c4d06f-32.webp",
-    "srcSet": "/portfolio-optimized/covers/55b4f5c2a2c4d06f-32.webp 32w",
-    "width": 32
-  },
-  "/portfolio/covers/c04db297776863f5.jpeg": {
-    "height": 25,
-    "src": "/portfolio-optimized/covers/c04db297776863f5-32.webp",
-    "srcSet": "/portfolio-optimized/covers/c04db297776863f5-32.webp 32w",
-    "width": 32
-  },
-  "/portfolio/covers/cfe791a99413cf7e.png": {
-    "height": 25,
-    "src": "/portfolio-optimized/covers/cfe791a99413cf7e-32.webp",
-    "srcSet": "/portfolio-optimized/covers/cfe791a99413cf7e-32.webp 32w",
-    "width": 32
-  },
-  "/portfolio/covers/f749bf2ba87de59e.png": {
-    "height": 390,
-    "src": "/portfolio-optimized/covers/f749bf2ba87de59e-500.webp",
-    "srcSet": "/portfolio-optimized/covers/f749bf2ba87de59e-320.webp 320w, /portfolio-optimized/covers/f749bf2ba87de59e-500.webp 500w",
-    "width": 500
   },
   "/portfolio/design/14a69637ab56fcfd.jpg": {
     "height": 315,
@@ -405,12 +363,6 @@
     "height": 800,
     "src": "/portfolio-optimized/illustration/52-600.webp",
     "srcSet": "/portfolio-optimized/illustration/52-320.webp 320w, /portfolio-optimized/illustration/52-600.webp 600w",
-    "width": 600
-  },
-  "/portfolio/illustration/illustration-01.jpg": {
-    "height": 600,
-    "src": "/portfolio-optimized/illustration/illustration-01-600.webp",
-    "srcSet": "/portfolio-optimized/illustration/illustration-01-320.webp 320w, /portfolio-optimized/illustration/illustration-01-600.webp 600w",
     "width": 600
   },
   "/portfolio/knitwear/0f5d7596f1e0b9cb.jpg": {
