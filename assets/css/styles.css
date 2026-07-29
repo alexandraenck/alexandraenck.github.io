@@ -291,9 +291,21 @@ em { font-weight: 400; }
   z-index: 2;
 }
 .hero-composite .artwork-trigger {
+  border: 1px solid rgba(36, 48, 74, .1);
   border-radius: 28px;
-  box-shadow: 0 22px 55px rgba(36, 48, 74, .16);
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, .82) inset,
+    0 18px 38px rgba(36, 48, 74, .16),
+    0 38px 82px rgba(36, 48, 74, .18);
   height: auto;
+  transition: box-shadow .35s ease, transform .35s ease;
+}
+.hero-composite .artwork-trigger:hover {
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, .86) inset,
+    0 22px 44px rgba(36, 48, 74, .18),
+    0 44px 92px rgba(36, 48, 74, .2);
+  transform: translateY(-4px);
 }
 .hero-composite .artwork-trigger img {
   height: auto;
@@ -454,6 +466,7 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
 .design-section .project-kicker.light { border-color: var(--line); }
 .design-intro { align-items: end; display: grid; gap: 3rem; grid-template-columns: 1.25fr .55fr; margin: 2.5rem 0 3.5rem; }
 .design-intro h2 { font-size: clamp(2.9rem, 4vw, 4.3rem); }
+.design-intro h2 em { color: var(--cobalt); }
 .design-grid {
   height: clamp(620px, 52vw, 820px);
   margin: 0 auto;
