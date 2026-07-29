@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PixelTrail } from "./PixelTrail";
 
 export const metadata: Metadata = {
   title: "Alexandra Enck | Multidisciplinary Creative",
@@ -24,7 +25,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <PixelTrail />
+        {children}
+      </body>
     </html>
   );
 }
