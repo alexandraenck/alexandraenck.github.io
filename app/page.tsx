@@ -57,7 +57,7 @@ export default function Home() {
         </nav>
         <nav className="utility-nav" aria-label="Site navigation">
           <a href="#about">About</a>
-          <a className="nav-cta" href="#contact">Let&apos;s talk ↗</a>
+          <a className="nav-cta" href="#contact">Let&apos;s talk</a>
         </nav>
       </header>
 
