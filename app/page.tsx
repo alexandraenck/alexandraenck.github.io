@@ -107,7 +107,9 @@ export default function Home() {
             media="(min-width: 901px)"
             sizes="100vw"
           />
-          <span className="hero-composite-tag">made by hand</span>
+          <span className="hero-composite-tag">
+            <img src="/ui/made-by-hand.png" alt="made by hand" width="632" height="126" />
+          </span>
         </div>
         <div className="hero-art" aria-label="Featured work">
           <figure className="hero-image hero-image-main">
@@ -129,7 +131,9 @@ export default function Home() {
               sizes="42vw"
             />
           </figure>
-          <span className="scribble">made by hand</span>
+          <span className="scribble">
+            <img src="/ui/made-by-hand.png" alt="made by hand" width="632" height="126" />
+          </span>
         </div>
         <div className="hero-index" aria-hidden="true">01—04</div>
       </section>
