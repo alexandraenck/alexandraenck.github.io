@@ -298,13 +298,14 @@ em { font-weight: 400; }
     0 18px 38px rgba(36, 48, 74, .16),
     0 38px 82px rgba(36, 48, 74, .18);
   height: auto;
-  transition: box-shadow .35s ease;
+  transition: box-shadow .35s ease, transform .35s ease;
 }
 .hero-composite .artwork-trigger:hover {
   box-shadow:
     0 2px 0 rgba(255, 255, 255, .86) inset,
     0 22px 44px rgba(36, 48, 74, .18),
     0 44px 92px rgba(36, 48, 74, .2);
+  transform: translateY(-4px);
 }
 .hero-composite .artwork-trigger img {
   height: auto;
