@@ -6,8 +6,6 @@
   --cobalt: #4156c7;
   --lilac: #c9bbff;
   --mint: #a9dec9;
-  --sage: #cbd0b5;
-  --earth: #9b6244;
   --pink: #f5a9cf;
   --teal: #287c78;
   --line: rgba(36, 48, 74, 0.24);
@@ -138,17 +136,17 @@ em { font-weight: 400; }
   transition: .25s ease;
   width: 76px;
 }
-.circle-link:hover { background: var(--earth); color: var(--paper); transform: rotate(8deg) scale(1.06); }
+.circle-link:hover { background: var(--mint); color: var(--ink); transform: rotate(8deg) scale(1.06); }
 .hero-art { align-self: center; height: min(74vh, 760px); position: relative; }
 .hero-image { margin: 0; overflow: hidden; position: absolute; }
 .hero-image img { height: 100%; object-fit: cover; }
 .hero-image-main { background: #d9d0c5; border-radius: 46% 46% 30px 30px; height: 84%; right: 2%; top: 6%; transform: rotate(1.5deg); width: 61%; }
-.hero-image-float { border: 12px solid var(--earth); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
+.hero-image-float { border: 2px solid var(--mint); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
 .hero-image-float img { object-fit: contain; background: white; }
 .scribble { background: var(--mint); border-radius: 100px; bottom: 8%; color: var(--ink); font-family: "Comic Sans MS", cursive; font-size: clamp(.85rem, 1.5vw, 1.25rem); left: 40%; padding: 8px 14px; position: absolute; transform: rotate(-8deg); z-index: 3; }
 .hero-index { bottom: 3.4vw; font-family: Georgia, "Times New Roman", serif; font-size: 0.9rem; position: absolute; right: 3.4vw; }
 
-.ticker { background: var(--earth); color: var(--paper); overflow: hidden; padding: 14px 0; transform: rotate(-1deg) scale(1.02); }
+.ticker { background: var(--mint); color: var(--ink); overflow: hidden; padding: 14px 0; transform: rotate(-1deg) scale(1.02); }
 .ticker div { animation: ticker 28s linear infinite; display: flex; gap: 2.8rem; width: max-content; }
 .ticker span { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; font-style: italic; white-space: nowrap; }
 @keyframes ticker { to { transform: translateX(-50%); } }
@@ -178,7 +176,7 @@ em { font-weight: 400; }
 .design-intro p, .knitwear-intro p, .tv-grid p, .about-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; line-height: 1.55; max-width: 31rem; }
 figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-transform: uppercase; }
 
-.design-section { background: var(--sage); color: var(--ink); }
+.design-section { background: var(--mint); color: var(--ink); }
 .design-section .project-kicker.light { border-color: var(--line); }
 .design-intro { align-items: end; display: grid; gap: 5rem; grid-template-columns: 1.5fr .5fr; margin: 4rem 0 8rem; }
 .design-grid { display: grid; gap: 7rem 2.5vw; grid-template-columns: repeat(12, 1fr); }
@@ -285,7 +283,7 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
   transition: background .2s ease, transform .2s ease;
   width: 38px;
 }
-.contact-dialog__close:hover { background: var(--earth); color: var(--paper); transform: rotate(7deg); }
+.contact-dialog__close:hover { background: var(--mint); color: var(--ink); transform: rotate(7deg); }
 .contact-dialog__intro {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
@@ -362,7 +360,7 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
   .hero h1 { font-size: clamp(4.5rem, 24vw, 7rem); }
   .hero-art { height: 58vh; }
   .hero-image-main { height: 82%; right: 0; width: 76%; }
-  .hero-image-float { border-width: 7px; bottom: 2%; left: 0; width: 42%; }
+  .hero-image-float { border-width: 2px; bottom: 2%; left: 0; width: 42%; }
   .scribble { left: 35%; }
   .section-pad, .project-section { padding-left: 5vw; padding-right: 5vw; }
   .project-links a { min-height: 95px; }

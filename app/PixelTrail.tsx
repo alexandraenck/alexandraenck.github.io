@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 
 const pixelColors = [
   "var(--pink)",
-  "var(--earth)",
+  "var(--mint)",
   "var(--mint)",
   "var(--lilac)",
   "var(--cobalt)",
   "var(--pink)",
-  "var(--earth)",
+  "var(--mint)",
   "var(--mint)",
 ];
 
