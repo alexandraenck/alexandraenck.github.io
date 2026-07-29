@@ -1,4 +1,5 @@
 import { ContactPopup } from "./ContactPopup";
+import { ClickableArtwork } from "./ClickableArtwork";
 
 const designWork = [
   { src: "/portfolio/design/49d14d2b61411227.png", title: "Sweaterchef Logo" },
@@ -29,6 +30,14 @@ const knitwearWork = [
   "2e343b45ddeb391b.jpg",
   "899e600e7c59bec2.jpg",
 ];
+
+const illustrationPngs = new Set([13, 30, 37, 40, 43, 44]);
+const illustrationWork = Array.from({ length: 52 }, (_, index) => {
+  const number = index + 1;
+  const extension =
+    number === 46 ? "jpeg" : illustrationPngs.has(number) ? "png" : "jpg";
+  return `${String(number).padStart(2, "0")}.${extension}`;
+});
 
 export default function Home() {
   return (
@@ -66,26 +75,29 @@ export default function Home() {
         </div>
         <div className="hero-art" aria-label="Featured work">
           <figure className="hero-image hero-image-main">
-            <img
+            <ClickableArtwork
               src="/portfolio/knitwear/d427cf5ad9d08180.jpeg"
               alt="Sculptural grey knit sweater designed by Alexandra Enck"
+              loading="eager"
             />
           </figure>
           <figure className="hero-image hero-image-float">
-            <img
+            <ClickableArtwork
               src="/portfolio/design/49d14d2b61411227.png"
               alt="Purple Sweaterchef logo designed by Alexandra Enck"
+              loading="eager"
             />
           </figure>
           <span className="scribble">made by hand</span>
         </div>
-        <div className="hero-index" aria-hidden="true">01—03</div>
+        <div className="hero-index" aria-hidden="true">01—04</div>
       </section>
 
       <div className="ticker" aria-hidden="true">
         <div>
-          <span>Graphic Design ✦</span><span>Knitwear ✦</span>
-          <span>Television ✦</span><span>Graphic Design ✦</span>
+          <span>Illustration ✦</span><span>Graphic Design ✦</span>
+          <span>Knitwear ✦</span><span>Television ✦</span>
+          <span>Illustration ✦</span><span>Graphic Design ✦</span>
           <span>Knitwear ✦</span><span>Television ✦</span>
         </div>
       </div>
@@ -93,23 +105,29 @@ export default function Home() {
       <section className="work-index section-pad" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected disciplines</p>
-          <h2>Work, in three acts.</h2>
+          <h2>Work, in four acts.</h2>
         </div>
         <div className="project-links">
-          <a href="#design">
+          <a href="#illustration">
             <span className="project-number">01</span>
+            <span className="project-name">Illustration</span>
+            <span className="project-note">Editorial / Character / Image</span>
+            <span className="project-arrow">↘</span>
+          </a>
+          <a href="#design">
+            <span className="project-number">02</span>
             <span className="project-name">Design</span>
             <span className="project-note">Identity / Digital / Print</span>
             <span className="project-arrow">↘</span>
           </a>
           <a href="#knitwear">
-            <span className="project-number">02</span>
+            <span className="project-number">03</span>
             <span className="project-name">Knitwear</span>
             <span className="project-note">Form / Fiber / Detail</span>
             <span className="project-arrow">↘</span>
           </a>
           <a href="#television">
-            <span className="project-number">03</span>
+            <span className="project-number">04</span>
             <span className="project-name">Television</span>
             <span className="project-note">Commercial / Screen</span>
             <span className="project-arrow">↘</span>
@@ -117,9 +135,35 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="project-section illustration-section" id="illustration">
+        <div className="project-kicker">
+          <span>01 / Illustration</span>
+          <span>Selected image-making</span>
+        </div>
+        <div className="illustration-intro">
+          <h2>Drawn to<br /><em>the idea.</em></h2>
+          <p>
+            Editorial images, character studies, and visual experiments gathered
+            from Alexandra&apos;s original illustration archive.
+          </p>
+        </div>
+        <div className="illustration-grid">
+          {illustrationWork.map((file, index) => (
+            <figure key={file}>
+              <ClickableArtwork
+                src={`/portfolio/illustration/${file}`}
+                alt={`Alexandra Enck illustration ${String(index + 1).padStart(2, "0")}`}
+                loading={index > 7 ? "lazy" : "eager"}
+              />
+              <figcaption>Illustration {String(index + 1).padStart(2, "0")}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section className="project-section design-section" id="design">
         <div className="project-kicker light">
-          <span>01 / Design</span>
+          <span>02 / Design</span>
           <span>Identity, digital &amp; print</span>
         </div>
         <div className="design-intro">
@@ -133,7 +177,11 @@ export default function Home() {
           {designWork.map((item, index) => (
             <figure className={`design-card card-${index + 1}`} key={item.src}>
               <div className="image-wrap">
-                <img src={item.src} alt={`${item.title} by Alexandra Enck`} />
+                <ClickableArtwork
+                  src={item.src}
+                  alt={`${item.title} by Alexandra Enck`}
+                  loading={index > 3 ? "lazy" : "eager"}
+                />
               </div>
               <figcaption>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -146,7 +194,7 @@ export default function Home() {
 
       <section className="project-section knitwear-section" id="knitwear">
         <div className="project-kicker">
-          <span>02 / Knitwear</span>
+          <span>03 / Knitwear</span>
           <span>Selected constructions</span>
         </div>
         <div className="knitwear-intro">
@@ -159,7 +207,7 @@ export default function Home() {
         <div className="knitwear-grid">
           {knitwearWork.map((file, index) => (
             <figure key={file}>
-              <img
+              <ClickableArtwork
                 src={`/portfolio/knitwear/${file}`}
                 alt={`Alexandra Enck knitwear study ${String(index + 1).padStart(2, "0")}`}
                 loading={index > 5 ? "lazy" : "eager"}
@@ -172,7 +220,7 @@ export default function Home() {
 
       <section className="project-section television-section" id="television">
         <div className="project-kicker light">
-          <span>03 / Television</span>
+          <span>04 / Television</span>
           <span>Commercial work</span>
         </div>
         <div className="tv-grid">
