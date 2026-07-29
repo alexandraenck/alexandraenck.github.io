@@ -404,10 +404,11 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
 .knitwear-grid figure:hover img { transform: translateY(-5px); }
 
 .television-section {
-  background: var(--teal);
-  color: white;
+  background: #8fa99f;
+  color: var(--ink);
   padding-bottom: clamp(2rem, 3vw, 3rem);
 }
+.television-section .project-kicker.light { border-color: var(--line); }
 .tv-grid { display: grid; gap: 6vw; grid-template-columns: .8fr 1.2fr; margin-top: 3.5rem; }
 .tv-grid h2 em { color: var(--paper); }
 .video-shell { align-self: end; }
@@ -415,7 +416,7 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
 .video-shell span { display: block; font-size: .65rem; letter-spacing: .12em; margin-top: .8rem; text-transform: uppercase; }
 
 .about {
-  background: var(--lilac);
+  background: #d7cfe2;
   padding-top: clamp(2rem, 3vw, 3rem);
 }
 .about-grid { display: grid; gap: 7vw; grid-template-columns: 1.4fr .6fr; margin-top: 3.5rem; }
@@ -423,7 +424,7 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
 .about h2 em { color: var(--cobalt); }
 .about-small { border-top: 1px solid var(--line); font-family: Arial, sans-serif !important; font-size: .75rem !important; letter-spacing: .06em; margin-top: 2rem; padding-top: .8rem; text-transform: uppercase; }
 
-footer { background: var(--pink); color: var(--ink); padding: clamp(3.5rem, 6.5vw, 6.5rem) 3.2vw 1.5rem; }
+footer { background: #e5bec1; color: var(--ink); padding: clamp(3.5rem, 6.5vw, 6.5rem) 3.2vw 1.5rem; }
 .footer-top h2 { font-size: clamp(3.2rem, 5.2vw, 5.3rem); }
 .footer-top h2 em { color: var(--cobalt); }
 .contact-link {
