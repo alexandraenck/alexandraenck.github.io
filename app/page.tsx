@@ -68,8 +68,8 @@ export default function Home() {
           </figure>
           <figure className="hero-image hero-image-float">
             <img
-              src="/portfolio/illustration/illustration-01.jpg"
-              alt="Fashion portrait illustration by Alexandra Enck"
+              src="/portfolio/design/49d14d2b61411227.png"
+              alt="Purple Sweaterchef logo designed by Alexandra Enck"
             />
           </figure>
           <span className="scribble">made by hand</span>
