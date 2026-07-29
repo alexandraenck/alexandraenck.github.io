@@ -608,8 +608,7 @@ footer { background: #f7cfe4; color: var(--ink); padding: clamp(3.5rem, 6.5vw, 6
     min-width: max-content;
     padding: 4px clamp(9px, 2.5vw, 18px) 2px !important;
   }
-  .utility-nav a:not(.nav-cta) { display: none; }
-  .nav-cta { min-height: 36px !important; padding: 8px 13px !important; }
+  .nav-cta { display: none !important; }
   .hero { display: grid; grid-template-columns: 1fr; padding-top: 7rem; }
   .hero-copy { padding-left: 0; }
   .hero-composite { display: none; }
