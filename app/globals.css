@@ -6,7 +6,7 @@
   --cobalt: #4156c7;
   --lilac: #c9bbff;
   --mint: #a9dec9;
-  --sun: #f7c84b;
+  --earth: #9b6244;
   --pink: #f5a9cf;
   --teal: #287c78;
   --line: rgba(36, 48, 74, 0.24);
@@ -137,17 +137,17 @@ em { font-weight: 400; }
   transition: .25s ease;
   width: 76px;
 }
-.circle-link:hover { background: var(--sun); color: var(--ink); transform: rotate(8deg) scale(1.06); }
+.circle-link:hover { background: var(--earth); color: var(--paper); transform: rotate(8deg) scale(1.06); }
 .hero-art { align-self: center; height: min(74vh, 760px); position: relative; }
 .hero-image { margin: 0; overflow: hidden; position: absolute; }
 .hero-image img { height: 100%; object-fit: cover; }
 .hero-image-main { background: #d9d0c5; border-radius: 46% 46% 30px 30px; height: 84%; right: 2%; top: 6%; transform: rotate(1.5deg); width: 61%; }
-.hero-image-float { border: 12px solid var(--sun); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
+.hero-image-float { border: 12px solid var(--earth); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
 .hero-image-float img { object-fit: contain; background: white; }
 .scribble { background: var(--mint); border-radius: 100px; bottom: 8%; color: var(--ink); font-family: "Comic Sans MS", cursive; font-size: clamp(.85rem, 1.5vw, 1.25rem); left: 40%; padding: 8px 14px; position: absolute; transform: rotate(-8deg); z-index: 3; }
 .hero-index { bottom: 3.4vw; font-family: Georgia, "Times New Roman", serif; font-size: 0.9rem; position: absolute; right: 3.4vw; }
 
-.ticker { background: var(--sun); color: var(--ink); overflow: hidden; padding: 14px 0; transform: rotate(-1deg) scale(1.02); }
+.ticker { background: var(--earth); color: var(--paper); overflow: hidden; padding: 14px 0; transform: rotate(-1deg) scale(1.02); }
 .ticker div { animation: ticker 28s linear infinite; display: flex; gap: 2.8rem; width: max-content; }
 .ticker span { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; font-style: italic; white-space: nowrap; }
 @keyframes ticker { to { transform: translateX(-50%); } }
@@ -203,7 +203,7 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
 
 .television-section { background: var(--teal); color: white; }
 .tv-grid { display: grid; gap: 7vw; grid-template-columns: .8fr 1.2fr; margin-top: 5rem; }
-.tv-grid h2 em { color: var(--sun); }
+.tv-grid h2 em { color: var(--paper); }
 .video-shell { align-self: end; }
 .video-shell iframe { aspect-ratio: 16 / 9; border: 0; border-radius: 26px; display: block; width: 100%; }
 .video-shell span { display: block; font-size: .65rem; letter-spacing: .12em; margin-top: .8rem; text-transform: uppercase; }
@@ -283,7 +283,7 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
   transition: background .2s ease, transform .2s ease;
   width: 38px;
 }
-.contact-dialog__close:hover { background: var(--sun); transform: rotate(7deg); }
+.contact-dialog__close:hover { background: var(--earth); color: var(--paper); transform: rotate(7deg); }
 .contact-dialog__intro {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
