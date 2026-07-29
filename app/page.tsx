@@ -1,5 +1,7 @@
 import { ContactPopup } from "./ContactPopup";
 import { ClickableArtwork } from "./ClickableArtwork";
+import { DeferredVideo } from "./DeferredVideo";
+import { IllustrationArchive } from "./IllustrationArchive";
 
 const designWork = [
   { src: "/portfolio/design/49d14d2b61411227.png", title: "Sweaterchef Logo" },
@@ -52,10 +54,20 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Alexandra Enck, home">
-          <img
-            src="/portfolio/brand/alexandra-signature-transparent.png"
-            alt="Alexandra J. Enck"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/portfolio-optimized/brand/alexandra-signature-transparent-320.webp 320w, /portfolio-optimized/brand/alexandra-signature-transparent-640.webp 640w, /portfolio-optimized/brand/alexandra-signature-transparent-783.webp 783w"
+              sizes="(max-width: 900px) 68vw, 400px"
+            />
+            <img
+              src="/portfolio-optimized/brand/alexandra-signature-transparent-640.webp"
+              alt="Alexandra J. Enck"
+              width="783"
+              height="90"
+              decoding="async"
+            />
+          </picture>
         </a>
         <nav className="discipline-nav" aria-label="Portfolio categories">
           <a href="#illustration">Illustration</a>
@@ -91,6 +103,9 @@ export default function Home() {
             src="/portfolio/brand/alexandra-hero-banner.png"
             alt="Alexandra Enck — Illustration, Design, Knitwear, and Television"
             loading="eager"
+            fetchPriority="high"
+            media="(min-width: 901px)"
+            sizes="100vw"
           />
           <span className="hero-composite-tag">made by hand</span>
         </div>
@@ -100,13 +115,18 @@ export default function Home() {
               src="/portfolio/knitwear/d427cf5ad9d08180.jpeg"
               alt="Sculptural grey knit sweater designed by Alexandra Enck"
               loading="eager"
+              fetchPriority="high"
+              media="(max-width: 900px)"
+              sizes="76vw"
             />
           </figure>
           <figure className="hero-image hero-image-float">
             <ClickableArtwork
               src="/portfolio/design/49d14d2b61411227.png"
               alt="Purple Sweaterchef logo designed by Alexandra Enck"
-              loading="eager"
+              loading="lazy"
+              media="(max-width: 900px)"
+              sizes="42vw"
             />
           </figure>
           <span className="scribble">made by hand</span>
@@ -174,38 +194,14 @@ export default function Home() {
               <ClickableArtwork
                 src={`/portfolio/illustration/${item.file}`}
                 alt={`Alexandra Enck illustration ${String(item.number).padStart(2, "0")}`}
-                loading={index > 4 ? "lazy" : "eager"}
+                loading="lazy"
+                sizes="(max-width: 600px) 46vw, 20vw"
               />
               <figcaption>Illustration {String(item.number).padStart(2, "0")}</figcaption>
             </figure>
           ))}
         </div>
-        <details className="illustration-archive">
-          <summary>
-            <span className="archive-summary-copy">
-              <strong>View all illustrations</strong>
-              <small>42 more works from the complete archive</small>
-            </span>
-            <span className="archive-summary-action archive-summary-action--open">
-              Open archive ↓
-            </span>
-            <span className="archive-summary-action archive-summary-action--close">
-              Close archive ↑
-            </span>
-          </summary>
-          <div className="illustration-grid illustration-grid--archive">
-            {illustrationArchive.map((item) => (
-              <figure key={item.file}>
-                <ClickableArtwork
-                  src={`/portfolio/illustration/${item.file}`}
-                  alt={`Alexandra Enck illustration ${String(item.number).padStart(2, "0")}`}
-                  loading="lazy"
-                />
-                <figcaption>Illustration {String(item.number).padStart(2, "0")}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </details>
+        <IllustrationArchive items={illustrationArchive} />
       </section>
 
       <section className="project-section design-section" id="design">
@@ -227,7 +223,8 @@ export default function Home() {
                 <ClickableArtwork
                   src={item.src}
                   alt={`${item.title} by Alexandra Enck`}
-                  loading={index > 3 ? "lazy" : "eager"}
+                  loading="lazy"
+                  sizes="(max-width: 600px) 46vw, (max-width: 900px) 80vw, 35vw"
                 />
               </div>
               <figcaption>
@@ -257,7 +254,8 @@ export default function Home() {
               <ClickableArtwork
                 src={`/portfolio/knitwear/${file}`}
                 alt={`Alexandra Enck knitwear ${String(index + 1).padStart(2, "0")}`}
-                loading={index > 5 ? "lazy" : "eager"}
+                loading="lazy"
+                sizes="(max-width: 600px) 46vw, 20vw"
               />
               <figcaption>Knitwear {String(index + 1).padStart(2, "0")}</figcaption>
             </figure>
@@ -279,16 +277,7 @@ export default function Home() {
               character.
             </p>
           </div>
-          <div className="video-shell">
-            <iframe
-              src="https://www-ccv.adobe.io/v1/player/ccv/KRTHs7gpr6g/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
-              title="Alexandra Enck commercial reel"
-              allow="autoplay; fullscreen"
-              loading="lazy"
-              allowFullScreen
-            />
-            <span>Commercial reel · Geico commercial</span>
-          </div>
+          <DeferredVideo />
         </div>
       </section>
 
