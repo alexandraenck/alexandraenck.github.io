@@ -490,9 +490,15 @@ figcaption { font-size: .65rem; letter-spacing: .12em; margin-top: .7rem; text-t
   padding-top: clamp(1.5rem, 2vw, 2rem);
 }
 .television-section .project-kicker.light { border-color: var(--line); }
-.tv-grid { align-items: center; display: grid; gap: 4vw; grid-template-columns: .8fr 1.2fr; margin-top: 2rem; }
+.tv-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 3vw, 3rem);
+  grid-template-columns: .78fr 1.22fr;
+  margin-top: 2rem;
+}
 .tv-grid h2 em { color: #34499f; }
-.video-shell { justify-self: end; max-width: 640px; width: 100%; }
+.video-shell { justify-self: start; max-width: 720px; width: 100%; }
 .video-shell iframe { aspect-ratio: 16 / 9; border: 0; border-radius: 26px; display: block; width: 100%; }
 .video-shell span { display: block; font-size: .65rem; letter-spacing: .12em; margin-top: .8rem; text-transform: uppercase; }
 .video-poster {
@@ -722,6 +728,7 @@ footer { background: #f7cfe4; color: var(--ink); padding: clamp(3.5rem, 6.5vw, 6
   .design-intro, .illustration-intro, .knitwear-intro, .tv-grid { gap: 1.5rem; }
   .design-intro, .illustration-intro { margin-bottom: 3.5rem; }
   .knitwear-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .video-shell { justify-self: end; max-width: 640px; }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
