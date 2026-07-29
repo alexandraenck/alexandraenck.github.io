@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Multidisciplinary creative · Selected work 2024</p>
+          <p className="eyebrow">Multidisciplinary creative · Selected work</p>
           <h1>
             Ideas with
             <br />
