@@ -34,7 +34,7 @@ const archivedKnitwear = [
   { number: 17, file: "899e600e7c59bec2.jpg" },
 ];
 
-const featuredIllustrations = [1, 6, 7, 8, 14, 3, 29, 30, 42, 43];
+const featuredIllustrations = [37, 6, 7, 8, 14, 3, 29, 30, 48, 9];
 const pngIllustrations = new Set([13, 30, 37, 40, 43, 44]);
 
 function illustrationFile(number) {
