@@ -1,3 +1,5 @@
+import { ContactPopup } from "./ContactPopup";
+
 const designWork = [
   { src: "/portfolio/design/49d14d2b61411227.png", title: "Sweaterchef Logo" },
   { src: "/portfolio/design/14a69637ab56fcfd.jpg", title: "Landing Page" },
@@ -220,14 +222,7 @@ export default function Home() {
         <div className="footer-top">
           <p className="eyebrow">Have a project in mind?</p>
           <h2>Let&apos;s make<br /><em>something good.</em></h2>
-          <a
-            className="contact-link"
-            href="https://alexandraenck.myportfolio.com/contact"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Start a conversation <span>↗</span>
-          </a>
+          <ContactPopup />
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Alexandra Enck</span>

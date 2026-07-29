@@ -41,6 +41,9 @@ test("server-renders Alexandra Enck's portfolio", async () => {
   assert.match(html, /KRTHs7gpr6g/);
   assert.match(html, /alexandra-signature-original\.png/);
   assert.match(html, /pixel-trail/);
+  assert.match(html, /contact-dialog/);
+  assert.match(html, /Email delivery will be connected soon/);
+  assert.doesNotMatch(html, /alexandraenck\.myportfolio\.com\/contact/);
   assert.doesNotMatch(html, /og-playful\.png|og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
