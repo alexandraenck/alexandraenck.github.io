@@ -148,11 +148,18 @@ a { color: inherit; text-decoration: none; }
   top: -7px;
   width: 14px;
 }
+.pixel-trail.is-interactive .pixel-trail__pixel:first-child {
+  animation: cursor-pulse .8s ease-in-out infinite;
+}
 .pixel-trail__pixel:nth-child(n + 5) {
   height: 7px;
   left: -3.5px;
   top: -3.5px;
   width: 7px;
+}
+@keyframes cursor-pulse {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.65; }
 }
 
 @media (hover: hover) and (pointer: fine) {

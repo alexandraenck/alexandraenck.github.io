@@ -31,10 +31,21 @@ export function PixelTrail() {
     const move = (event: PointerEvent) => {
       target.x = event.clientX;
       target.y = event.clientY;
-      trailRef.current?.classList.add("is-visible");
+      const trail = trailRef.current;
+      const hoveredElement =
+        event.target instanceof Element
+          ? event.target.closest(
+              'a, button, summary, input, textarea, select, label, [role="button"]',
+            )
+          : null;
+
+      trail?.classList.add("is-visible");
+      trail?.classList.toggle("is-interactive", Boolean(hoveredElement));
     };
 
-    const hide = () => trailRef.current?.classList.remove("is-visible");
+    const hide = () => {
+      trailRef.current?.classList.remove("is-visible", "is-interactive");
+    };
 
     const animate = () => {
       positions.forEach((position, index) => {
