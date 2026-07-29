@@ -69,14 +69,6 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero-banner" aria-label="Alexandra Enck portfolio introduction">
-        <ClickableArtwork
-          src="/portfolio/brand/alexandra-hero-banner.png"
-          alt="Alexandra Enck — Illustration, Design, Knitwear, and Television"
-          loading="eager"
-        />
-      </section>
-
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Multidisciplinary creative · Selected work</p>
@@ -93,6 +85,14 @@ export default function Home() {
             Explore
             <br />↓
           </a>
+        </div>
+        <div className="hero-composite" aria-label="Alexandra Enck portfolio introduction">
+          <ClickableArtwork
+            src="/portfolio/brand/alexandra-hero-banner.png"
+            alt="Alexandra Enck — Illustration, Design, Knitwear, and Television"
+            loading="eager"
+          />
+          <span className="hero-composite-tag">made by hand</span>
         </div>
         <div className="hero-art" aria-label="Featured work">
           <figure className="hero-image hero-image-main">
