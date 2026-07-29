@@ -158,8 +158,18 @@ a { color: inherit; text-decoration: none; }
   width: 7px;
 }
 @keyframes cursor-pulse {
-  0%, 100% { scale: 1; }
-  50% { scale: 1.65; }
+  0%, 100% {
+    height: 14px;
+    left: -7px;
+    top: -7px;
+    width: 14px;
+  }
+  50% {
+    height: 24px;
+    left: -12px;
+    top: -12px;
+    width: 24px;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
