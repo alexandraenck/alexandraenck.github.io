@@ -116,10 +116,10 @@ export default function Home() {
 
       <div className="ticker" aria-hidden="true">
         <div>
-          <span>Illustration ✦</span><span>Graphic Design ✦</span>
-          <span>Knitwear ✦</span><span>Television ✦</span>
-          <span>Illustration ✦</span><span>Graphic Design ✦</span>
-          <span>Knitwear ✦</span><span>Television ✦</span>
+          <span>Storytelling ✦</span><span>Tactile thinking ✦</span>
+          <span>Character &amp; image ✦</span><span>Shape &amp; silhouette ✦</span>
+          <span>Storytelling ✦</span><span>Tactile thinking ✦</span>
+          <span>Character &amp; image ✦</span><span>Shape &amp; silhouette ✦</span>
         </div>
       </div>
 
