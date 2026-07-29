@@ -11,21 +11,24 @@ const designWork = [
   { file: "b4b0557f12ec997e.jpg", title: "Brand Application" },
 ];
 
-const knitwearWork = [
+const featuredKnitwear = [
   "d427cf5ad9d08180.jpeg",
-  "137892e9098af142.jpg",
+  "3046a4697affddfc.jpg",
+  "321109c7d2133179.jpg",
   "990692caa37f7340.jpg",
-  "87c4080cd27320c0.jpg",
-  "4061d171603af883.jpg",
-  "f1f624328c8b0374.jpeg",
+  "0f5d7596f1e0b9cb.jpg",
   "d04e88dd7366293e.jpeg",
+  "4061d171603af883.jpg",
   "500da5f0f92e7f97.jpg",
   "534e9f5d09f237d3.jpeg",
-  "321109c7d2133179.jpg",
-  "3046a4697affddfc.jpg",
+  "137892e9098af142.jpg",
+];
+
+const archivedKnitwear = [
+  "87c4080cd27320c0.jpg",
+  "f1f624328c8b0374.jpeg",
   "4e8ea318c6656dd9.jpg",
   "df96ac12037d54fd.JPG",
-  "0f5d7596f1e0b9cb.jpg",
   "c61b66df583c6a45.jpg",
   "2e343b45ddeb391b.jpg",
   "899e600e7c59bec2.jpg",
@@ -124,11 +127,10 @@ function renderDesign(manifest) {
     .join("");
 }
 
-function renderKnitwear(manifest) {
-  const container = document.querySelector("#knitwear-grid");
-  container.innerHTML = knitwearWork
+function renderKnitwear(container, files, startingNumber, manifest) {
+  container.innerHTML = files
     .map((file, index) => {
-      const label = String(index + 1).padStart(2, "0");
+      const label = String(index + startingNumber).padStart(2, "0");
       const source = `${portfolioRoot}/knitwear/${file}`;
       return `
         <figure>
@@ -151,7 +153,12 @@ renderIllustrations(
   imageManifest,
 );
 renderDesign(imageManifest);
-renderKnitwear(imageManifest);
+renderKnitwear(
+  document.querySelector("#knitwear-grid"),
+  featuredKnitwear,
+  1,
+  imageManifest,
+);
 
 const illustrationArchive = document.querySelector("#illustration-archive");
 illustrationArchive.addEventListener("toggle", () => {
@@ -165,6 +172,21 @@ illustrationArchive.addEventListener("toggle", () => {
     imageManifest,
   );
   illustrationArchive.dataset.loaded = "true";
+});
+
+const knitwearArchive = document.querySelector("#knitwear-archive");
+knitwearArchive.addEventListener("toggle", () => {
+  if (!knitwearArchive.open || knitwearArchive.dataset.loaded) {
+    return;
+  }
+
+  renderKnitwear(
+    document.querySelector("#knitwear-archive-grid"),
+    archivedKnitwear,
+    featuredKnitwear.length + 1,
+    imageManifest,
+  );
+  knitwearArchive.dataset.loaded = "true";
 });
 
 // Shared full-size artwork viewer -------------------------------------------
