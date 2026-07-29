@@ -75,7 +75,7 @@ a { color: inherit; text-decoration: none; }
 }
 .wordmark {
   display: block;
-  width: clamp(288px, 33.6vw, 492px);
+  width: clamp(345.6px, 40.32vw, 590.4px);
 }
 .wordmark img {
   display: block;
@@ -141,7 +141,7 @@ em { font-weight: 400; }
 .hero-image { margin: 0; overflow: hidden; position: absolute; }
 .hero-image img { height: 100%; object-fit: cover; }
 .hero-image-main { background: #d9d0c5; border-radius: 46% 46% 30px 30px; height: 84%; right: 2%; top: 6%; transform: rotate(1.5deg); width: 61%; }
-.hero-image-float { border: 2px solid var(--mint); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
+.hero-image-float { border: 4px solid var(--ink); border-radius: 30px; bottom: 3%; height: 38%; left: 3%; transform: rotate(-5deg); width: 38%; z-index: 2; }
 .hero-image-float img { object-fit: contain; background: white; }
 .scribble { background: var(--mint); border-radius: 100px; bottom: 8%; color: var(--ink); font-family: "Comic Sans MS", cursive; font-size: clamp(.85rem, 1.5vw, 1.25rem); left: 40%; padding: 8px 14px; position: absolute; transform: rotate(-8deg); z-index: 3; }
 .hero-index { bottom: 3.4vw; font-family: Georgia, "Times New Roman", serif; font-size: 0.9rem; position: absolute; right: 3.4vw; }
@@ -353,14 +353,14 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
 
 @media (max-width: 600px) {
   .site-header { align-items: flex-start; }
-  .wordmark { width: min(62.4vw, 276px); }
+  .wordmark { width: min(74.88vw, 331.2px); }
   nav { gap: 12px; }
   nav a:not(.nav-cta) { display: none; }
   .hero { padding-left: 5vw; padding-right: 5vw; }
   .hero h1 { font-size: clamp(4.5rem, 24vw, 7rem); }
   .hero-art { height: 58vh; }
   .hero-image-main { height: 82%; right: 0; width: 76%; }
-  .hero-image-float { border-width: 2px; bottom: 2%; left: 0; width: 42%; }
+  .hero-image-float { border-width: 4px; bottom: 2%; left: 0; width: 42%; }
   .scribble { left: 35%; }
   .section-pad, .project-section { padding-left: 5vw; padding-right: 5vw; }
   .project-links a { min-height: 95px; }
