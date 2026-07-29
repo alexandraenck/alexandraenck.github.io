@@ -346,15 +346,19 @@ em { font-weight: 400; }
 .project-links { border-top: 1px solid var(--ink); }
 .project-links a {
   align-items: center;
+  background-color: transparent;
   border-bottom: 1px solid var(--ink);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 8% 47% 1fr auto;
   min-height: 96px;
   padding: 1rem 0;
-  transition: .25s ease;
+  transition:
+    background-color .22s ease-in-out,
+    border-radius .22s ease-in-out,
+    padding .22s ease-in-out;
 }
-.project-links a:hover { background: var(--mint); border-radius: 18px; padding-left: 1rem; padding-right: 1rem; }
+.project-links a:hover { background-color: var(--mint); border-radius: 18px; padding-left: 1rem; padding-right: 1rem; }
 .project-number, .project-note { font-size: 0.68rem; letter-spacing: .12em; text-transform: uppercase; }
 .project-name { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.4rem, 4.4vw, 4.5rem); letter-spacing: -.06em; }
 .project-arrow { align-items: center; background: var(--pink); border-radius: 50%; display: flex; font-size: 1.15rem; height: 40px; justify-content: center; width: 40px; }
