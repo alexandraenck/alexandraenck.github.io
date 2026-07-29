@@ -12,26 +12,26 @@ const designWork = [
 ];
 
 const featuredKnitwear = [
-  "d427cf5ad9d08180.jpeg",
-  "3046a4697affddfc.jpg",
-  "321109c7d2133179.jpg",
-  "990692caa37f7340.jpg",
-  "0f5d7596f1e0b9cb.jpg",
-  "d04e88dd7366293e.jpeg",
-  "4061d171603af883.jpg",
-  "500da5f0f92e7f97.jpg",
-  "534e9f5d09f237d3.jpeg",
-  "137892e9098af142.jpg",
+  { number: 1, file: "d427cf5ad9d08180.jpeg" },
+  { number: 2, file: "3046a4697affddfc.jpg" },
+  { number: 3, file: "321109c7d2133179.jpg" },
+  { number: 4, file: "990692caa37f7340.jpg" },
+  { number: 5, file: "0f5d7596f1e0b9cb.jpg" },
+  { number: 6, file: "d04e88dd7366293e.jpeg" },
+  { number: 7, file: "4061d171603af883.jpg" },
+  { number: 8, file: "500da5f0f92e7f97.jpg" },
+  { number: 15, file: "c61b66df583c6a45.jpg" },
+  { number: 11, file: "87c4080cd27320c0.jpg" },
 ];
 
 const archivedKnitwear = [
-  "87c4080cd27320c0.jpg",
-  "f1f624328c8b0374.jpeg",
-  "4e8ea318c6656dd9.jpg",
-  "df96ac12037d54fd.JPG",
-  "c61b66df583c6a45.jpg",
-  "2e343b45ddeb391b.jpg",
-  "899e600e7c59bec2.jpg",
+  { number: 9, file: "534e9f5d09f237d3.jpeg" },
+  { number: 10, file: "137892e9098af142.jpg" },
+  { number: 12, file: "f1f624328c8b0374.jpeg" },
+  { number: 13, file: "4e8ea318c6656dd9.jpg" },
+  { number: 14, file: "df96ac12037d54fd.JPG" },
+  { number: 16, file: "2e343b45ddeb391b.jpg" },
+  { number: 17, file: "899e600e7c59bec2.jpg" },
 ];
 
 const featuredIllustrations = [1, 6, 7, 8, 14, 3, 29, 30, 42, 43];
@@ -127,11 +127,11 @@ function renderDesign(manifest) {
     .join("");
 }
 
-function renderKnitwear(container, files, startingNumber, manifest) {
-  container.innerHTML = files
-    .map((file, index) => {
-      const label = String(index + startingNumber).padStart(2, "0");
-      const source = `${portfolioRoot}/knitwear/${file}`;
+function renderKnitwear(container, pieces, manifest) {
+  container.innerHTML = pieces
+    .map((piece) => {
+      const label = String(piece.number).padStart(2, "0");
+      const source = `${portfolioRoot}/knitwear/${piece.file}`;
       return `
         <figure>
           ${artworkButton({
@@ -156,7 +156,6 @@ renderDesign(imageManifest);
 renderKnitwear(
   document.querySelector("#knitwear-grid"),
   featuredKnitwear,
-  1,
   imageManifest,
 );
 
@@ -183,7 +182,6 @@ knitwearArchive.addEventListener("toggle", () => {
   renderKnitwear(
     document.querySelector("#knitwear-archive-grid"),
     archivedKnitwear,
-    featuredKnitwear.length + 1,
     imageManifest,
   );
   knitwearArchive.dataset.loaded = "true";
