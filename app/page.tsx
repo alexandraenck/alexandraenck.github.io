@@ -41,7 +41,7 @@ const illustrationFile = (number: number) => {
   };
 };
 
-const curatedIllustrationNumbers = [1, 6, 7, 8, 14, 16, 29, 30, 42, 43];
+const curatedIllustrationNumbers = [1, 6, 7, 8, 14, 3, 29, 30, 42, 43];
 const illustrationWork = curatedIllustrationNumbers.map(illustrationFile);
 const illustrationArchive = Array.from({ length: 52 }, (_, index) => index + 1)
   .filter((number) => !curatedIllustrationNumbers.includes(number))
