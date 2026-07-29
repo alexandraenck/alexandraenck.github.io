@@ -39,6 +39,6 @@ test("server-renders Alexandra Enck's portfolio", async () => {
   assert.match(html, /Knitwear/);
   assert.match(html, /Television/);
   assert.match(html, /KRTHs7gpr6g/);
-  assert.match(html, /https:\/\/alexandra\.example\/og\.png/);
+  assert.doesNotMatch(html, /og-playful\.png|og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });

@@ -33,7 +33,10 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Alexandra Enck, home">
-          Alexandra <span>Enck</span>
+          <img
+            src="/portfolio/brand/alexandra-enck-mark.jpg"
+            alt="Alexandra J. Enck"
+          />
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
