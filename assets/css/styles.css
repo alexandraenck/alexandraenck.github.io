@@ -334,11 +334,11 @@ em { font-weight: 400; }
 /* Moving practice descriptor strip */
 .ticker {
   background: var(--mint);
-  border-block: 1px solid rgba(36, 48, 74, .09);
+  border-block: 2px solid rgba(255, 255, 255, .9);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, .5) inset,
-    0 9px 22px rgba(36, 48, 74, .14),
-    0 18px 42px rgba(36, 48, 74, .09);
+    0 1px 0 rgba(255, 255, 255, .72) inset,
+    0 7px 18px rgba(36, 48, 74, .08),
+    0 14px 30px rgba(36, 48, 74, .05);
   color: var(--ink);
   overflow: hidden;
   padding: 10px 0;
