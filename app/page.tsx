@@ -34,7 +34,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Alexandra Enck, home">
           <img
-            src="/portfolio/brand/alexandra-enck-mark.jpg"
+            src="/portfolio/brand/alexandra-signature-original.png"
             alt="Alexandra J. Enck"
           />
         </a>
