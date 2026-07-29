@@ -49,8 +49,13 @@ export default function Home() {
             alt="Alexandra J. Enck"
           />
         </a>
-        <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
+        <nav className="discipline-nav" aria-label="Portfolio categories">
+          <a href="#illustration">Illustration</a>
+          <a href="#design">Design</a>
+          <a href="#knitwear">Knitwear</a>
+          <a href="#television">Television</a>
+        </nav>
+        <nav className="utility-nav" aria-label="Site navigation">
           <a href="#about">About</a>
           <a className="nav-cta" href="#contact">Let&apos;s talk ↗</a>
         </nav>

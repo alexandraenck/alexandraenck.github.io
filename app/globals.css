@@ -13,13 +13,14 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img { display: block; width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -160,27 +161,34 @@ a { color: inherit; text-decoration: none; }
 
 .site-header {
   align-items: center;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 248, 231, .91);
+  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   left: 0;
-  padding: 22px 3.2vw;
-  position: absolute;
+  padding: 14px 3.2vw;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 20;
 }
 .wordmark {
   display: block;
-  width: clamp(345.6px, 40.32vw, 590.4px);
+  flex: 0 1 auto;
+  width: clamp(230px, 25vw, 370px);
 }
 .wordmark img {
   display: block;
   height: auto;
   width: 100%;
 }
-nav { align-items: center; display: flex; gap: clamp(16px, 3vw, 44px); font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.12em; }
-nav a { border-bottom: 1px solid transparent; padding: 7px 0; }
-nav a:hover { border-color: currentColor; }
+.site-header nav { align-items: center; display: flex; font-size: 0.7rem; letter-spacing: 0.11em; text-transform: uppercase; }
+.site-header nav a { align-items: center; border-bottom: 1px solid transparent; display: inline-flex; min-height: 44px; padding: 7px 0; }
+.site-header nav a:hover { border-color: currentColor; }
+.discipline-nav { gap: clamp(12px, 1.7vw, 26px); justify-content: center; }
+.discipline-nav a { white-space: nowrap; }
+.utility-nav { gap: clamp(12px, 1.6vw, 24px); justify-content: flex-end; }
 .nav-cta { background: var(--cobalt); border: 0 !important; border-radius: 100px; color: white; padding: 12px 18px; transition: transform .2s ease, background .2s ease; }
 .nav-cta:hover { background: var(--teal); transform: translateY(-2px); }
 
@@ -267,6 +275,7 @@ em { font-weight: 400; }
 .project-arrow { align-items: center; background: var(--pink); border-radius: 50%; display: flex; font-size: 1.4rem; height: 46px; justify-content: center; width: 46px; }
 
 .project-kicker { border-bottom: 1px solid var(--ink); display: flex; font-size: .68rem; justify-content: space-between; letter-spacing: .13em; padding-bottom: 1rem; text-transform: uppercase; }
+.project-section, .about, footer { scroll-margin-top: 88px; }
 .project-kicker.light { border-color: rgba(255,255,255,.42); }
 .design-intro h2, .illustration-intro h2, .knitwear-intro h2, .tv-grid h2 { font-size: clamp(4.2rem, 9vw, 9rem); }
 .design-intro p, .illustration-intro p, .knitwear-intro p, .tv-grid p, .about-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; line-height: 1.55; max-width: 31rem; }
@@ -443,6 +452,31 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
 .footer-bottom { border-top: 1px solid rgba(36,48,74,.38); display: flex; font-size: .64rem; justify-content: space-between; letter-spacing: .11em; margin-top: 8rem; padding-top: 1.3rem; text-transform: uppercase; }
 
 @media (max-width: 900px) {
+  html { scroll-padding-top: 138px; }
+  .site-header {
+    display: grid;
+    gap: 8px 16px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 10px 4vw 9px;
+  }
+  .wordmark { width: min(56vw, 285px); }
+  .discipline-nav {
+    border-top: 1px solid var(--line);
+    gap: 0;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-top: 4px;
+    scrollbar-width: none;
+  }
+  .discipline-nav::-webkit-scrollbar { display: none; }
+  .discipline-nav a {
+    justify-content: center;
+    min-width: max-content;
+    padding: 6px clamp(9px, 2.5vw, 18px) 4px !important;
+  }
+  .utility-nav a:not(.nav-cta) { display: none; }
+  .nav-cta { min-height: 40px !important; padding: 10px 14px !important; }
   .hero { grid-template-columns: 1fr; padding-top: 8rem; }
   .hero-art { height: 66vh; margin-top: -1rem; }
   .hero-image-main { width: 64%; }
@@ -450,35 +484,50 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(5rem, 10vw, 
   .hero-index { display: none; }
   .section-heading, .design-intro, .illustration-intro, .knitwear-intro, .tv-grid, .about-grid { grid-template-columns: 1fr; }
   .section-heading { gap: 2rem; margin-bottom: 4rem; }
-  .project-links a { grid-template-columns: 10% 1fr auto; }
+  .project-links a { grid-template-columns: 10% minmax(0, 1fr) auto; }
   .project-note { display: none; }
   .design-intro, .illustration-intro, .knitwear-intro, .tv-grid { gap: 2rem; }
   .design-intro, .illustration-intro { margin-bottom: 5rem; }
 }
 
 @media (max-width: 600px) {
-  .site-header { align-items: flex-start; }
-  .wordmark { width: min(74.88vw, 331.2px); }
-  nav { gap: 12px; }
-  nav a:not(.nav-cta) { display: none; }
-  .hero { padding-left: 5vw; padding-right: 5vw; }
-  .hero h1 { font-size: clamp(4.5rem, 24vw, 7rem); }
-  .hero-art { height: 58vh; }
+  html { scroll-padding-top: 126px; }
+  .site-header { gap: 6px 10px; padding-left: 4vw; padding-right: 4vw; }
+  .wordmark { width: min(58vw, 235px); }
+  .site-header nav { font-size: .59rem; letter-spacing: .08em; }
+  .discipline-nav a { padding-left: 8px !important; padding-right: 8px !important; }
+  .nav-cta { font-size: .6rem; padding-left: 11px !important; padding-right: 11px !important; }
+  .hero { min-height: auto; padding: 9rem 5vw 3rem; }
+  .hero h1 { font-size: clamp(4.15rem, 22vw, 6.4rem); }
+  .hero-intro { max-width: 20rem; }
+  .hero-art { height: 52vh; margin-top: 1rem; min-height: 390px; }
   .hero-image-main { height: 82%; right: 0; width: 76%; }
   .hero-image-float { border-width: 4px; bottom: 2%; left: 0; width: 42%; }
   .scribble { left: 35%; }
-  .section-pad, .project-section { padding-left: 5vw; padding-right: 5vw; }
+  .section-pad, .project-section { padding: 4.5rem 5vw; }
   .project-links a { min-height: 95px; }
-  .project-name { font-size: 2.35rem; }
+  .project-name { font-size: clamp(1.9rem, 10vw, 2.35rem); }
   .project-arrow { font-size: 1.3rem; }
   .design-intro h2, .illustration-intro h2, .knitwear-intro h2, .tv-grid h2, .about h2 { font-size: clamp(3.4rem, 18vw, 5.5rem); }
   .design-grid { display: block; }
   .design-card, .card-2, .card-4, .card-6 { margin: 0 0 4.5rem; }
-  .knitwear-grid { columns: 2 140px; }
-  .illustration-grid { columns: 2 140px; }
+  .knitwear-grid { column-gap: .8rem; columns: 2 130px; }
+  .illustration-grid { column-gap: .8rem; columns: 2 130px; }
   .illustration-grid figure { margin-bottom: 2rem; }
   .knitwear-grid figure { margin-bottom: 2rem; }
+  .illustration-grid figure:nth-child(4n+2),
+  .knitwear-grid figure:nth-child(3n+2) { padding-top: 1.25rem; }
+  figcaption { font-size: .56rem; letter-spacing: .08em; }
+  .artwork-lightbox { padding: .75rem; }
+  .artwork-lightbox__content img { max-height: calc(100vh - 5rem); max-width: calc(100vw - 1.5rem); }
+  .artwork-lightbox__close { height: 42px; right: 12px; top: 12px; width: 42px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 1rem; }
+}
+
+@media (max-width: 360px) {
+  .discipline-nav { justify-content: flex-start; }
+  .hero h1 { font-size: 3.8rem; }
+  .project-name { font-size: 1.72rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
