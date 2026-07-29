@@ -13,7 +13,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 body {
   margin: 0;
   background: var(--paper);
@@ -202,8 +202,25 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-cta:hover { background: var(--teal); transform: translateY(-2px); }
 
+.hero-banner {
+  background: var(--paper);
+  padding-top: 67px;
+}
+.hero-banner .artwork-trigger {
+  height: auto;
+  overflow: visible;
+}
+.hero-banner .artwork-trigger img {
+  height: auto;
+  object-fit: contain;
+}
+.hero-banner .artwork-trigger__hint {
+  bottom: 18px;
+  right: 18px;
+}
+
 .hero {
-  display: grid;
+  display: none;
   grid-template-columns: 46% 54%;
   min-height: min(820px, 88svh);
   overflow: hidden;
@@ -285,7 +302,7 @@ em { font-weight: 400; }
 .project-arrow { align-items: center; background: var(--pink); border-radius: 50%; display: flex; font-size: 1.15rem; height: 40px; justify-content: center; width: 40px; }
 
 .project-kicker { border-bottom: 1px solid var(--ink); display: flex; font-size: .68rem; justify-content: space-between; letter-spacing: .13em; padding-bottom: 1rem; text-transform: uppercase; }
-.project-section, .about, footer { scroll-margin-top: 88px; }
+.project-section, .about, footer { scroll-margin-top: 0; }
 .project-kicker.light { border-color: rgba(255,255,255,.42); }
 .design-intro h2, .illustration-intro h2, .knitwear-intro h2, .tv-grid h2 { font-size: clamp(3rem, 4.9vw, 5rem); }
 .design-intro p, .illustration-intro p, .knitwear-intro p, .tv-grid p, .about-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; line-height: 1.5; max-width: 29rem; }
@@ -530,7 +547,7 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(3.5rem, 6.5v
 .footer-bottom { border-top: 1px solid rgba(36,48,74,.38); display: flex; font-size: .64rem; justify-content: space-between; letter-spacing: .11em; margin-top: 4.5rem; padding-top: 1rem; text-transform: uppercase; }
 
 @media (max-width: 900px) {
-  html { scroll-padding-top: 126px; }
+  html { scroll-padding-top: 98px; }
   .site-header {
     display: grid;
     gap: 5px 14px;
@@ -555,7 +572,8 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(3.5rem, 6.5v
   }
   .utility-nav a:not(.nav-cta) { display: none; }
   .nav-cta { min-height: 36px !important; padding: 8px 13px !important; }
-  .hero { grid-template-columns: 1fr; padding-top: 7rem; }
+  .hero-banner { display: none; }
+  .hero { display: grid; grid-template-columns: 1fr; padding-top: 7rem; }
   .hero-art { height: 56vh; margin-top: -1rem; }
   .hero-image-main { width: 64%; }
   .hero-image-float { left: 8%; width: 34%; }
@@ -569,7 +587,7 @@ footer { background: var(--pink); color: var(--ink); padding: clamp(3.5rem, 6.5v
 }
 
 @media (max-width: 600px) {
-  html { scroll-padding-top: 116px; }
+  html { scroll-padding-top: 96px; }
   .site-header { gap: 4px 9px; padding-left: 4vw; padding-right: 4vw; }
   .wordmark { width: min(68vw, 270px); }
   .site-header nav { font-size: .59rem; letter-spacing: .08em; }

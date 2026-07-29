@@ -49,7 +49,7 @@ const illustrationArchive = Array.from({ length: 52 }, (_, index) => index + 1)
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Alexandra Enck, home">
           <img
@@ -69,7 +69,15 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero" id="top">
+      <section className="hero-banner" aria-label="Alexandra Enck portfolio introduction">
+        <ClickableArtwork
+          src="/portfolio/brand/alexandra-hero-banner.png"
+          alt="Alexandra Enck — Illustration, Design, Knitwear, and Television"
+          loading="eager"
+        />
+      </section>
+
+      <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Multidisciplinary creative · Selected work</p>
           <h1>
