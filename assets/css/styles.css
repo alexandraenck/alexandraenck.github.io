@@ -298,14 +298,13 @@ em { font-weight: 400; }
     0 18px 38px rgba(36, 48, 74, .16),
     0 38px 82px rgba(36, 48, 74, .18);
   height: auto;
-  transition: box-shadow .35s ease, transform .35s ease;
+  transition: box-shadow .35s ease;
 }
 .hero-composite .artwork-trigger:hover {
   box-shadow:
     0 2px 0 rgba(255, 255, 255, .86) inset,
     0 22px 44px rgba(36, 48, 74, .18),
     0 44px 92px rgba(36, 48, 74, .2);
-  transform: translateY(-4px);
 }
 .hero-composite .artwork-trigger img {
   height: auto;
@@ -335,6 +334,11 @@ em { font-weight: 400; }
 /* Moving practice descriptor strip */
 .ticker {
   background: var(--mint);
+  border-block: 1px solid rgba(36, 48, 74, .09);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .5) inset,
+    0 9px 22px rgba(36, 48, 74, .14),
+    0 18px 42px rgba(36, 48, 74, .09);
   color: var(--ink);
   overflow: hidden;
   padding: 10px 0;
